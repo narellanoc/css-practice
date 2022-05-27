@@ -3,4 +3,11 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # get "/", :controller => "tacos", :action => "index"
+
+  resources "users"
+  resources "services"
+  resources "sessions"
+
+  get "/", :controller => "users", :action => "index"
+
 end
