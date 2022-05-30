@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   resources "services"
   resources "sessions"
 
-  get "/", :controller => "users", :action => "index"
+  get "/", :controller => "services", :action => "index"
+  get "/login", :controller => "sessions", :action => "new"
+  get "/logout", :controller => "sessions", :action => "destroy"
 
 end

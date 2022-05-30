@@ -12,24 +12,25 @@
 
 ActiveRecord::Schema.define(version: 0) do
 
-    create_table "users", force: :cascade do |t|
-        t.string "first_name"
-        t.string "last_name"
-        t.string "email"
-        t.string "password"
-        t.datetime "created_at", precision: 6, null: false
-        t.datetime "updated_at", precision: 6, null: false
-      end
+  create_table "services", force: :cascade do |t|
+    t.string "date"
+    t.string "dental_clinic"
+    t.string "patient"
+    t.string "procedure"
+    t.integer "total_payment"
+    t.integer "income"
+    t.integer "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
-      create_table "services", force: :cascade do |t|
-        t.string "date"
-        t.string "dental_clinic"
-        t.string "patient"
-        t.string "procedure"
-        t.integer "total_payment"
-        t.integer "income"
-        t.integer "user_id"
-        t.datetime "created_at", precision: 6, null: false
-        t.datetime "updated_at", precision: 6, null: false
-      end
+  create_table "users", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "email"
+    t.string "password"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
 end

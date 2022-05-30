@@ -1,0 +1,32 @@
+<h1>New Service for <%= @user["first_name"] ["last_name"]%></h1>
+
+<%= form_with :model => @service do |form| %>
+  <p>
+    <%= form.label "Date" %>
+    <%= form.date_field "date" %>
+ </p>
+  <p>  
+    <%= form.label "Dental Clinic" %>
+    <%= form.text_field "dental_clinic" %>
+  </p>
+  <p>
+    <%= form.label "Patient" %>
+    <%= form.text_field "patient" %>
+ </p>
+  <p>
+    <%= form.label "Procedure" %>
+    <%= form.text_field "procedure" %>
+  </p>
+  <p>
+    <%= form.label "Total Payment" %>
+    <%= form.number_field "total_payment" %>
+  </p>
+  <p>
+    <%= form.label "Income" %>
+    <%= form.number_field "income" %>
+  </p>
+
+  <!-- So we can transfer state from the previous action to the next -->
+  <%= form.hidden_field "user_id" %>
+  <%= form.submit %>
+<% end %>

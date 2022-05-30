@@ -1,0 +1,21 @@
+#<h1><%= @user["first_name"] %>, <%= @user["last_name"] %></h1>
+
+<h3>Services </h3>
+
+<ul>
+  <% for service in @services %>
+    <li>
+      <%= service["date"] %>
+      <br>
+      <%= service["dental_clinic"] %>
+      <br>
+      <%= service["patient"] %>
+      <br>
+      <%= service["procedure"] %>
+      <br>
+      <%= service["total_payment"] %>
+      <br>
+      <%= service["income"] %>
+    </li>
+  <% end %>
+</ul>
